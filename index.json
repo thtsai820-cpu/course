@@ -1,0 +1,78 @@
+file{
+  "0621": {
+    "title_zh": "經濟學",
+    "title_en": "Economics",
+    "file": "syllabi/0621_經濟學.pdf"
+  },
+  "0622": {
+    "title_zh": "運動管理學",
+    "title_en": "Sport Management",
+    "file": "syllabi/0622_運動管理學.pdf"
+  },
+  "0623": {
+    "title_zh": "休閒與遊憩概論",
+    "title_en": "An Introduction to Leisure and Recreation",
+    "file": "syllabi/0623_休閒與遊憩概論.pdf"
+  },
+  "0624": {
+    "title_zh": "服務管理",
+    "title_en": "Management in Service Industries",
+    "file": "syllabi/0624_服務管理.pdf"
+  },
+  "0625": {
+    "title_zh": "健康管理",
+    "title_en": "Health Management",
+    "file": "syllabi/0625_健康管理.pdf"
+  },
+  "0626": {
+    "title_zh": "體驗教育",
+    "title_en": "Experiential Education",
+    "file": "syllabi/0626_體驗教育.pdf"
+  },
+  "0627": {
+    "title_zh": "運動教育學",
+    "title_en": "Sport Pedagogy",
+    "file": "syllabi/0627_運動教育學.pdf"
+  },
+  "0628": {
+    "title_zh": "運動傷害復健",
+    "title_en": "Rehabilitation of Sports Injuries",
+    "file": "syllabi/0628_運動傷害復健.pdf"
+  },
+  "0629": {
+    "title_zh": "統計學(二)",
+    "title_en": "Statistics II",
+    "file": "syllabi/0629_統計學(二).pdf"
+  },
+  "0630": {
+    "title_zh": "游泳",
+    "title_en": "Swimming",
+    "file": "syllabi/0630_游泳.pdf"
+  },
+
+  "0576": {
+    "title_zh": "葡萄酒知識導論",
+    "title_en": "Introduction of Wine",
+    "file": "syllabi/0576_葡萄酒知識導論.pdf"
+  },
+  "0578": {
+    "title_zh": "觀光日語(二)",
+    "title_en": "Tourism Japanese (II)",
+    "file": "syllabi/0578_觀光日語(二).pdf"
+  },
+  "0586": {
+    "title_zh": "遊程規劃與設計",
+    "title_en": "Tour Planning and Design",
+    "file": "syllabi/0586_遊程規劃與設計.pdf"
+  },
+  "0587": {
+    "title_zh": "航空訂位系統",
+    "title_en": "Air Computer Reservation System",
+    "file": "syllabi/0587_航空訂位系統.pdf"
+  },
+  "0588": {
+    "title_zh": "國際會議展覽規劃與管理",
+    "title_en": "International Conference and Exhibition Planning and Management",
+    "file": "syllabi/0588_國際會議展覽規劃與管理.pdf"
+  }
+}
