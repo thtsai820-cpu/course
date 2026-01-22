@@ -10,22 +10,34 @@
     main { padding: 16px 18px; }
     .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
     input { padding: 10px 12px; font-size: 16px; width: 220px; }
-    button { padding: 10px 14px; font-size: 16px; cursor: pointer; }
+    button, select { padding: 10px 14px; font-size: 16px; cursor: pointer; }
+    button:disabled { opacity: 0.6; cursor: not-allowed; }
     .hint { color: #666; font-size: 14px; margin-top: 8px; }
-    .status { margin: 12px 0; font-size: 14px; }
+    .status { margin: 12px 0; font-size: 14px; white-space: pre-wrap; }
     .status.error { color: #b00020; }
     .status.ok { color: #0b6b0b; }
     .viewer-wrap { margin-top: 14px; border-top: 1px solid #eee; padding-top: 14px; }
-    iframe { width: 100%; height: 78vh; border: 1px solid #ddd; border-radius: 6px; }
+    iframe { width: 100%; height: 58vh; border: 1px solid #ddd; border-radius: 6px; }
+
     .meta { margin: 6px 0 0; color: #333; font-size: 14px; }
     code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+
+    .translate-wrap { margin-top: 14px; border-top: 1px solid #eee; padding-top: 14px; }
+    .panel { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .box { border: 1px solid #ddd; border-radius: 10px; padding: 10px; background: #fff; min-height: 220px; }
+    textarea { width: 100%; min-height: 220px; border: none; outline: none; resize: vertical; font-size: 14px; line-height: 1.5; }
+    .small { font-size: 13px; color: #666; }
+    .tools { display:flex; gap:10px; flex-wrap: wrap; align-items:center; margin: 10px 0; }
   </style>
 </head>
 
 <body>
   <header>
-    <h2 style="margin:0;">課程碼查詢課綱（PDF）</h2>
-    <div class="hint">輸入四位數課程碼，例如 <code>0576</code>，即可顯示對應課綱 PDF。</div>
+    <h2 style="margin:0;">課程碼查詢課綱（PDF）+ 翻譯</h2>
+    <div class="hint">
+      輸入四位數課程碼，例如 <code>0576</code>，即可顯示對應課綱 PDF。<br/>
+      翻譯方式：在 PDF 內反白後按 <code>右鍵選擇複製</code> 複製 → 回到原文框按 <code>右鍵選擇貼上</code> 貼上 → 按「翻譯」。
+    </div>
   </header>
 
   <main>
@@ -41,10 +53,52 @@
       <div id="meta" class="meta"></div>
       <iframe id="pdfFrame" title="Syllabus PDF Viewer"></iframe>
     </div>
+
+    <div id="translateArea" class="translate-wrap" style="display:none;">
+      <h3 style="margin:0 0 8px;">翻譯（手動複製 PDF 文字 → 貼上 → 翻譯）</h3>
+
+      <div class="tools">
+        <label class="small">目標語言：</label>
+        <select id="lang">
+          <option value="en">English</option>
+          <option value="ja">日本語</option>
+          <option value="ko">한국어</option>
+          <option value="vi">Tiếng Việt</option>
+          <option value="th">ไทย</option>
+          <option value="id">Bahasa Indonesia</option>
+          <option value="es">Español</option>
+          <option value="fr">Français</option>
+          <option value="de">Deutsch</option>
+        </select>
+
+        <!-- ✅ 只保留翻譯按鈕 -->
+        <button id="btnTranslate" type="button">翻譯</button>
+      </div>
+
+      <div class="panel">
+        <div class="box">
+          <div class="small">
+            請由 PDF 檔中進行反白複製（按右鍵選擇複製），並貼在此處（按右鍵選擇貼上），再按「翻譯」。
+          </div>
+          <textarea id="sourceText" placeholder="請由 PDF 檔中進行反白複製（按右鍵選擇複製），並貼在此處（按右鍵選擇貼上），再按「翻譯」。"></textarea>
+        </div>
+        <div class="box">
+          <div class="small">翻譯結果</div>
+          <textarea id="translatedText" placeholder="按「翻譯」後顯示"></textarea>
+        </div>
+      </div>
+
+      <div class="small" style="margin-top:8px;">
+        提醒：Windows 貼上是 <code>Ctrl+V</code>。Mac 是 <code>⌘+V</code>。
+      </div>
+    </div>
   </main>
 
   <script>
-    // 讀取索引表（課程碼 -> PDF路徑）
+    // ====== 設定：你的 Google Apps Script 翻譯端點 ======
+    const TRANSLATE_ENDPOINT = "https://script.google.com/macros/s/AKfycbzmMkx32IfB9rT9x3XIubiGv4RbRyWdzj9m2hdwFftQuQ7VrQupVrA9OUSeXlF-PB8qyA/exec";
+
+    // ====== 索引載入 ======
     let indexData = null;
 
     async function loadIndex() {
@@ -61,14 +115,13 @@
       el.className = 'status ' + (type || '');
     }
 
-    function showViewer(show) {
+    function showSections(show) {
       document.getElementById('viewer').style.display = show ? 'block' : 'none';
+      document.getElementById('translateArea').style.display = show ? 'block' : 'none';
     }
 
     function sanitizeCode(raw) {
-      // 保留數字，限制 4 碼
-      const digits = (raw || '').replace(/\D/g, '').slice(0, 4);
-      return digits;
+      return (raw || '').replace(/\D/g, '').slice(0, 4);
     }
 
     async function lookup() {
@@ -79,7 +132,7 @@
 
         if (code.length !== 4) {
           setStatus('請輸入四位數課程碼。', 'error');
-          showViewer(false);
+          showSections(false);
           return;
         }
 
@@ -89,25 +142,28 @@
         const entry = idx[code];
         if (!entry || !entry.file) {
           setStatus(`查無課程碼 ${code} 的課綱檔案。請確認 index.json 是否已加入此課程碼。`, 'error');
-          showViewer(false);
+          showSections(false);
           return;
         }
 
-        // 顯示 PDF
-        const filePath = entry.file;
+        const rawPath = entry.file;              // 可能含空格
+        const encodedPath = encodeURI(rawPath);  // ✅ 避免空格造成問題
+
         const title = entry.title_zh ? `｜${entry.title_zh}` : '';
-        document.getElementById('meta').textContent = `課程碼：${code} ${title}（檔案：${filePath}）`;
+        document.getElementById('meta').textContent = `課程碼：${code} ${title}（檔案：${rawPath}）`;
+        document.getElementById('pdfFrame').src = encodedPath;
 
-        const frame = document.getElementById('pdfFrame');
-        frame.src = filePath;
+        // 清空翻譯區
+        document.getElementById('sourceText').value = '';
+        document.getElementById('translatedText').value = '';
 
-        setStatus('已載入。', 'ok');
-        showViewer(true);
+        setStatus('已載入 PDF。請在 PDF 反白複製（Ctrl+C）後貼到原文框，再按「翻譯」。', 'ok');
+        showSections(true);
 
       } catch (err) {
         console.error(err);
         setStatus(`發生錯誤：${err.message}`, 'error');
-        showViewer(false);
+        showSections(false);
       }
     }
 
@@ -115,14 +171,75 @@
       document.getElementById('courseCode').value = '';
       document.getElementById('pdfFrame').src = '';
       document.getElementById('meta').textContent = '';
+      document.getElementById('sourceText').value = '';
+      document.getElementById('translatedText').value = '';
       setStatus('');
-      showViewer(false);
+      showSections(false);
     }
 
+    // ====== 翻譯：分段送到 Apps Script ======
+    function chunkText(text, maxChars = 2000) {
+      const chunks = [];
+      let i = 0;
+      while (i < text.length) {
+        chunks.push(text.slice(i, i + maxChars));
+        i += maxChars;
+      }
+      return chunks;
+    }
+
+    async function translateChunk(source, targetLang) {
+      const res = await fetch(TRANSLATE_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify({ target_lang: targetLang, text: source })
+      });
+
+      if (!res.ok) {
+        const t = await res.text();
+        throw new Error(`翻譯失敗（HTTP ${res.status}）：${t.slice(0, 200)}`);
+      }
+
+      const data = await res.json();
+      if (data.error) throw new Error(data.error);
+      return data.translated_text || "";
+    }
+
+    async function translateAll() {
+      const src = document.getElementById('sourceText').value.trim();
+      if (!src) {
+        setStatus('原文框沒有內容。請先由 PDF 反白複製（Ctrl+C）並貼上（Ctrl+V）。', 'error');
+        return;
+      }
+
+      const lang = document.getElementById('lang').value;
+      const btn = document.getElementById('btnTranslate');
+      btn.disabled = true;
+
+      try {
+        const parts = chunkText(src, 2000);
+        let out = "";
+
+        for (let i = 0; i < parts.length; i++) {
+          setStatus(`翻譯中…（段落 ${i + 1}/${parts.length}）`);
+          out += await translateChunk(parts[i], lang) + "\n";
+        }
+
+        document.getElementById('translatedText').value = out.trim();
+        setStatus('翻譯完成。', 'ok');
+      } catch (e) {
+        console.error(e);
+        setStatus(`翻譯失敗：${e.message}`, 'error');
+      } finally {
+        btn.disabled = false;
+      }
+    }
+
+    // ====== 綁定事件 ======
     document.getElementById('btnSearch').addEventListener('click', lookup);
     document.getElementById('btnClear').addEventListener('click', clearAll);
+    document.getElementById('btnTranslate').addEventListener('click', translateAll);
 
-    // Enter 直接查詢
     document.getElementById('courseCode').addEventListener('keydown', (e) => {
       if (e.key === 'Enter') lookup();
     });
