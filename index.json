@@ -1,78 +1,692 @@
 {
+  "0477": {
+    "title_zh": "多變量分析",
+    "title_en": "MultivariateAnalysis",
+    "file": "syllabi/0477 多變量分析.pdf"
+  },
+  "0478": {
+    "title_zh": "研究方法(二)",
+    "title_en": "ResearchMethodsII",
+    "file": "syllabi/0478 研究方法(二).pdf"
+  },
+  "0479": {
+    "title_zh": "企業實習(二)",
+    "title_en": "EnterprisePractice(II)",
+    "file": "syllabi/0479 企業實習(二).pdf"
+  },
+  "0480": {
+    "title_zh": "財務管理與研究",
+    "title_en": "Financialmanagementandstudies",
+    "file": "syllabi/0480 財務管理與研究.pdf"
+  },
+  "0481": {
+    "title_zh": "管理研究專題(二)",
+    "title_en": "ResearchtopicsofmanagementII",
+    "file": "syllabi/0481 管理研究專題(二).pdf"
+  },
+  "0482": {
+    "title_zh": "東協市場經營管理",
+    "title_en": "ASEANmarketmanagement",
+    "file": "syllabi/0482 東協市場經營管理.pdf"
+  },
+  "0484": {
+    "title_zh": "專題討論(二)",
+    "title_en": "Seminar(II)",
+    "file": "syllabi/0484 專題討論(二).pdf"
+  },
+  "0485": {
+    "title_zh": "管理經濟學",
+    "title_en": "Managerialeconomics",
+    "file": "syllabi/0485 管理經濟學.pdf"
+  },
+  "0486": {
+    "title_zh": "微積分(二)",
+    "title_en": "CalculusII",
+    "file": "syllabi/0486 微積分(二).pdf"
+  },
+  "0487": {
+    "title_zh": "經濟學",
+    "title_en": "Economics",
+    "file": "syllabi/0487 經濟學.pdf"
+  },
+  "0488": {
+    "title_zh": "管理學",
+    "title_en": "PrincipleofManagement",
+    "file": "syllabi/0488 管理學.pdf"
+  },
+  "0489": {
+    "title_zh": "人力資源管理",
+    "title_en": "Humanresourcemanagement",
+    "file": "syllabi/0489 人力資源管理.pdf"
+  },
+  "0490": {
+    "title_zh": "會計學(二)",
+    "title_en": "AccountingsII",
+    "file": "syllabi/0490 會計學(二).pdf"
+  },
+  "0491": {
+    "title_zh": "計算機概論",
+    "title_en": "IntroductiontoComputer",
+    "file": "syllabi/0491 計算機概論.pdf"
+  },
+  "0492": {
+    "title_zh": "行銷管理(二)",
+    "title_en": "MarketingManagementII",
+    "file": "syllabi/0492 行銷管理(二).pdf"
+  },
+  "0493": {
+    "title_zh": "微積分(二)",
+    "title_en": "CalculusII",
+    "file": "syllabi/0493 微積分(二).pdf"
+  },
+  "0494": {
+    "title_zh": "經濟學",
+    "title_en": "Economics",
+    "file": "syllabi/0494 經濟學.pdf"
+  },
+  "0495": {
+    "title_zh": "管理學",
+    "title_en": "PrincipleofManagement",
+    "file": "syllabi/0495 管理學.pdf"
+  },
+  "0496": {
+    "title_zh": "人力資源管理",
+    "title_en": "Humanresourcemanagement",
+    "file": "syllabi/0496 人力資源管理.pdf"
+  },
+  "0497": {
+    "title_zh": "會計學(二)",
+    "title_en": "AccountingsII",
+    "file": "syllabi/0497 會計學(二).pdf"
+  },
+  "0498": {
+    "title_zh": "資訊管理",
+    "title_en": "Informationmanagement",
+    "file": "syllabi/0498 資訊管理.pdf"
+  },
+  "0499": {
+    "title_zh": "商事法",
+    "title_en": "Commerciallaw",
+    "file": "syllabi/0499 商事法.pdf"
+  },
+  "0501": {
+    "title_zh": "統計學(二)",
+    "title_en": "StatisticsII",
+    "file": "syllabi/0501 統計學(二).pdf"
+  },
+  "0502": {
+    "title_zh": "財務管理(二)",
+    "title_en": "FinancialmanagementII",
+    "file": "syllabi/0502 財務管理(二).pdf"
+  },
+  "0503": {
+    "title_zh": "作業管理(二)",
+    "title_en": "OperationsmanagementII",
+    "file": "syllabi/0503 作業管理(二).pdf"
+  },
+  "0505": {
+    "title_zh": "資訊管理",
+    "title_en": "Informationmanagement",
+    "file": "syllabi/0505 資訊管理.pdf"
+  },
+  "0506": {
+    "title_zh": "商事法",
+    "title_en": "Commerciallaw",
+    "file": "syllabi/0506 商事法.pdf"
+  },
+  "0507": {
+    "title_zh": "統計學(二)",
+    "title_en": "StatisticsII",
+    "file": "syllabi/0507 統計學(二).pdf"
+  },
+  "0509": {
+    "title_zh": "財務管理(二)",
+    "title_en": "FinancialmanagementII",
+    "file": "syllabi/0509 財務管理(二).pdf"
+  },
+  "0510": {
+    "title_zh": "作業管理(二)",
+    "title_en": "OperationsmanagementII",
+    "file": "syllabi/0510 作業管理(二).pdf"
+  },
+  "0512": {
+    "title_zh": "專題研究(二)",
+    "title_en": "DirectedResearchII",
+    "file": "syllabi/0512 專題研究(二).pdf"
+  },
+  "0513": {
+    "title_zh": "策略管理(二)",
+    "title_en": "Strategymanagement(II)",
+    "file": "syllabi/0513 策略管理(二).pdf"
+  },
+  "0514": {
+    "title_zh": "統計應用軟體",
+    "title_en": "StatisticalApplicationSoftware",
+    "file": "syllabi/0514 統計應用軟體.pdf"
+  },
+  "0515": {
+    "title_zh": "服務業品質管理",
+    "title_en": "QualityManagementonServiceIndustry",
+    "file": "syllabi/0515 服務業品質管理.pdf"
+  },
+  "0516": {
+    "title_zh": "華人組織理論與研究",
+    "title_en": "Organizationtheoryandresearchinchinesesocieties",
+    "file": "syllabi/0516 華人組織理論與研究.pdf"
+  },
+  "0517": {
+    "title_zh": "企業倫理與社會責任",
+    "title_en": "CorporateEthicsandSocialResponsibility",
+    "file": "syllabi/0517 企業倫理與社會責任.pdf"
+  },
+  "0518": {
+    "title_zh": "專題研究(二)",
+    "title_en": "DirectedResearchII",
+    "file": "syllabi/0518 專題研究(二).pdf"
+  },
+  "0519": {
+    "title_zh": "策略管理(二)",
+    "title_en": "Strategymanagement(II)",
+    "file": "syllabi/0519 策略管理(二).pdf"
+  },
+  "0520": {
+    "title_zh": "人力資源訓練與發展",
+    "title_en": "Humanresourcetraininganddevelopment",
+    "file": "syllabi/0520 人力資源訓練與發展.pdf"
+  },
+  "0521": {
+    "title_zh": "AI數位管理工具",
+    "title_en": "AIToolsofManagement",
+    "file": "syllabi/0521 AI數位管理工具.pdf"
+  },
+  "0522": {
+    "title_zh": "全面品質管理",
+    "title_en": "TotalQualityManagement",
+    "file": "syllabi/0522 全面品質管理.pdf"
+  },
+  "0523": {
+    "title_zh": "專業實習(二)",
+    "title_en": "ProfessionalPracticeII",
+    "file": "syllabi/0523 專業實習(二).pdf"
+  },
+  "0524": {
+    "title_zh": "專業實習(二)",
+    "title_en": "ProfessionalPracticeII",
+    "file": "syllabi/0524 專業實習(二).pdf"
+  },
+  "0553": {
+    "title_zh": "質性研究",
+    "title_en": "QualitativeResearch",
+    "file": "syllabi/0553 質性研究.pdf"
+  },
+  "0554": {
+    "title_zh": "觀光遊憩消費者行為",
+    "title_en": "TourismandRecreationConsumerBehavior",
+    "file": "syllabi/0554 觀光遊憩消費者行為.pdf"
+  },
+  "0556": {
+    "title_zh": "管理專業英文",
+    "title_en": "ManagementofProfessionalEnglish",
+    "file": "syllabi/0556 管理專業英文.pdf"
+  },
+  "0557": {
+    "title_zh": "島嶼資源專題",
+    "title_en": "TheTopicofIslandResources",
+    "file": "syllabi/0557 島嶼資源專題.pdf"
+  },
+  "0558": {
+    "title_zh": "觀光管理研究(二)",
+    "title_en": "TourismManagementStudies(II)",
+    "file": "syllabi/0558 觀光管理研究(二).pdf"
+  },
+  "0559": {
+    "title_zh": "管理研究專題(二)",
+    "title_en": "ResearchtopicsofmanagementII",
+    "file": "syllabi/0559 管理研究專題(二).pdf"
+  },
+  "0560": {
+    "title_zh": "永續觀光發展研究",
+    "title_en": "SustainableTourismDevelopmentandResearch",
+    "file": "syllabi/0560 永續觀光發展研究.pdf"
+  },
   "0562": {
     "title_zh": "經濟學",
     "title_en": "Economics",
     "file": "syllabi/0562 經濟學.pdf"
   },
+  "0563": {
+    "title_zh": "休閒遊憩概論",
+    "title_en": "AnIntroductiontoLeisureandRecreation",
+    "file": "syllabi/0563 休閒遊憩概論.pdf"
+  },
+  "0564": {
+    "title_zh": "世界觀光資源",
+    "title_en": "WorldTourismResource",
+    "file": "syllabi/0564 世界觀光資源.pdf"
+  },
+  "0565": {
+    "title_zh": "基礎日語（二）",
+    "title_en": "BasicJapanese(II)",
+    "file": "syllabi/0565 基礎日語（二）.pdf"
+  },
+  "0566": {
+    "title_zh": "旅遊安全與急救常識",
+    "title_en": "TravelSafetyandEmergencyRescue",
+    "file": "syllabi/0566 旅遊安全與急救常識.pdf"
+  },
+  "0567": {
+    "title_zh": "導覽與解說概論",
+    "title_en": "Introductiontotourismguideandinterpretation",
+    "file": "syllabi/0567 導覽與解說概論.pdf"
+  },
+  "0568": {
+    "title_zh": "永續觀光",
+    "title_en": "SustainableTourism",
+    "file": "syllabi/0568 永續觀光.pdf"
+  },
+  "0569": {
+    "title_zh": "統計學(二)",
+    "title_en": "StatisticsII",
+    "file": "syllabi/0569 統計學(二).pdf"
+  },
+  "0570": {
+    "title_zh": "旅館管理",
+    "title_en": "HotelManagement",
+    "file": "syllabi/0570 旅館管理.pdf"
+  },
+  "0571": {
+    "title_zh": "觀光資源規劃與管理",
+    "title_en": "PlanningandManagementofTourismResources",
+    "file": "syllabi/0571 觀光資源規劃與管理.pdf"
+  },
+  "0572": {
+    "title_zh": "主題餐飲實務",
+    "title_en": "PlanningandDesignforRestaurantsandFoodservice",
+    "file": "syllabi/0572 主題餐飲實務.pdf"
+  },
+  "0573": {
+    "title_zh": "民宿經營與管理",
+    "title_en": "B&BOperationandManagement",
+    "file": "syllabi/0573 民宿經營與管理.pdf"
+  },
+  "0574": {
+    "title_zh": "旅遊銷售規劃與技巧",
+    "title_en": "TravelSalesPlanningandSkills",
+    "file": "syllabi/0574 旅遊銷售規劃與技巧.pdf"
+  },
+  "0575": {
+    "title_zh": "餐旅服務技術",
+    "title_en": "Hospitalityservicestechnology",
+    "file": "syllabi/0575 餐旅服務技術.pdf"
+  },
+  "0576": {
+    "title_zh": "葡萄酒知識導論",
+    "title_en": "Introductionofwine",
+    "file": "syllabi/0576 葡萄酒知識導論.pdf"
+  },
+  "0577": {
+    "title_zh": "文化觀光與藝術",
+    "title_en": "Culturaltourismandart",
+    "file": "syllabi/0577 文化觀光與藝術.pdf"
+  },
+  "0578": {
+    "title_zh": "觀光日語(二)",
+    "title_en": "TourismJapanese(II)",
+    "file": "syllabi/0578 觀光日語(二).pdf"
+  },
+  "0579": {
+    "title_zh": "地方創生與永續發展",
+    "title_en": "RegionalRevitalizationandSustainableDevelopment",
+    "file": "syllabi/0579 地方創生與永續發展.pdf"
+  },
+  "0580": {
+    "title_zh": "觀光專題研究(一)",
+    "title_en": "SpecialTopicsResearchonTourism(I)",
+    "file": "syllabi/0580 觀光專題研究(一).pdf"
+  },
+  "0581": {
+    "title_zh": "觀光專題研究(一)",
+    "title_en": "SpecialTopicsResearchonTourism(I)",
+    "file": "syllabi/0581 觀光專題研究(一).pdf"
+  },
+  "0582": {
+    "title_zh": "觀光專題研究(一)",
+    "title_en": "SpecialTopicsResearchonTourism(I)",
+    "file": "syllabi/0582 觀光專題研究(一).pdf"
+  },
+  "0583": {
+    "title_zh": "觀光英語(二)",
+    "title_en": "TourismEnglish(II)",
+    "file": "syllabi/0583 觀光英語(二).pdf"
+  },
+  "0584": {
+    "title_zh": "觀光事業財務管理",
+    "title_en": "TourismFinancialManagement",
+    "file": "syllabi/0584 觀光事業財務管理.pdf"
+  },
+  "0585": {
+    "title_zh": "生態觀光",
+    "title_en": "Ecotourism",
+    "file": "syllabi/0585 生態觀光.pdf"
+  },
+  "0586": {
+    "title_zh": "遊程規劃與設計",
+    "title_en": "TourPlanningandDesign",
+    "file": "syllabi/0586 遊程規劃與設計.pdf"
+  },
+  "0587": {
+    "title_zh": "航空訂位系統",
+    "title_en": "AirComputerReservationSystem",
+    "file": "syllabi/0587 航空訂位系統.pdf"
+  },
+  "0588": {
+    "title_zh": "國際會議展覽規劃與管理",
+    "title_en": "Internationalconferenceandexhibitionplanningandmanagement",
+    "file": "syllabi/0588 國際會議展覽規劃與管理.pdf"
+  },
+  "0589": {
+    "title_zh": "房務管理與實務",
+    "title_en": "HousekeepingManagementandPractice",
+    "file": "syllabi/0589 房務管理與實務.pdf"
+  },
+  "0590": {
+    "title_zh": "旅遊糾紛處理",
+    "title_en": "Tourismdisputesmanagement",
+    "file": "syllabi/0590 旅遊糾紛處理.pdf"
+  },
+  "0591": {
+    "title_zh": "專業實習(一)",
+    "title_en": "ProfessionalPracticeI",
+    "file": "syllabi/0591 專業實習(一).pdf"
+  },
+  "0592": {
+    "title_zh": "專業實習(二)",
+    "title_en": "ProfessionalPracticeII",
+    "file": "syllabi/0592 專業實習(二).pdf"
+  },
+  "0593": {
+    "title_zh": "專業實習(三)",
+    "title_en": "ProfessionalPracticeIII",
+    "file": "syllabi/0593 專業實習(三).pdf"
+  },
+  "0615": {
+    "title_zh": "運動觀光專題研究",
+    "title_en": "IndividualtopicsinSportTourism",
+    "file": "syllabi/0615 運動觀光專題研究.pdf"
+  },
+  "0616": {
+    "title_zh": "高等研究方法",
+    "title_en": "HigherResearchMethods",
+    "file": "syllabi/0616 高等研究方法.pdf"
+  },
+  "0617": {
+    "title_zh": "人力資源管理特論",
+    "title_en": "Humanresourcemanagement",
+    "file": "syllabi/0617 人力資源管理特論.pdf"
+  },
+  "0618": {
+    "title_zh": "管理研究專題(二)",
+    "title_en": "ResearchtopicsofmanagementII",
+    "file": "syllabi/0618 管理研究專題(二).pdf"
+  },
+  "0619": {
+    "title_zh": "運動生理學專題研究",
+    "title_en": "IndividualtopicsinSportsphysiology",
+    "file": "syllabi/0619 運動生理學專題研究.pdf"
+  },
+  "0621": {
+    "title_zh": "經濟學",
+    "title_en": "Economics",
+    "file": "syllabi/0621 經濟學.pdf"
+  },
   "0622": {
     "title_zh": "運動管理學",
-    "title_en": "Sport Management",
-    "file": "syllabi/0622_運動管理學.pdf"
+    "title_en": "SportManagement",
+    "file": "syllabi/0622 運動管理學.pdf"
   },
   "0623": {
     "title_zh": "休閒與遊憩概論",
-    "title_en": "An Introduction to Leisure and Recreation",
-    "file": "syllabi/0623_休閒與遊憩概論.pdf"
+    "title_en": "AnIntroductiontoLeisureandRecreation",
+    "file": "syllabi/0623 休閒與遊憩概論.pdf"
   },
   "0624": {
     "title_zh": "服務管理",
-    "title_en": "Management in Service Industries",
-    "file": "syllabi/0624_服務管理.pdf"
+    "title_en": "ManagementinServiceIndustries",
+    "file": "syllabi/0624 服務管理.pdf"
   },
   "0625": {
     "title_zh": "健康管理",
-    "title_en": "Health Management",
-    "file": "syllabi/0625_健康管理.pdf"
+    "title_en": "HealthManagement",
+    "file": "syllabi/0625 健康管理.pdf"
   },
   "0626": {
     "title_zh": "體驗教育",
-    "title_en": "Experiential Education",
-    "file": "syllabi/0626_體驗教育.pdf"
+    "title_en": "ExperientialEducation",
+    "file": "syllabi/0626 體驗教育.pdf"
   },
   "0627": {
     "title_zh": "運動教育學",
-    "title_en": "Sport Pedagogy",
-    "file": "syllabi/0627_運動教育學.pdf"
+    "title_en": "SportPedagogy",
+    "file": "syllabi/0627 運動教育學.pdf"
   },
   "0628": {
     "title_zh": "運動傷害復健",
-    "title_en": "Rehabilitation of Sports Injuries",
-    "file": "syllabi/0628_運動傷害復健.pdf"
+    "title_en": "RehabilitationofSportsInjuries",
+    "file": "syllabi/0628 運動傷害復健.pdf"
   },
   "0629": {
     "title_zh": "統計學(二)",
-    "title_en": "Statistics II",
-    "file": "syllabi/0629_統計學(二).pdf"
+    "title_en": "StatisticsII",
+    "file": "syllabi/0629 統計學(二).pdf"
   },
   "0630": {
     "title_zh": "游泳",
     "title_en": "Swimming",
-    "file": "syllabi/0630_游泳.pdf"
+    "file": "syllabi/0630 游泳.pdf"
   },
-
-  "0576": {
-    "title_zh": "葡萄酒知識導論",
-    "title_en": "Introduction of Wine",
-    "file": "syllabi/0576_葡萄酒知識導論.pdf"
+  "0631": {
+    "title_zh": "專業實習(一)",
+    "title_en": "ProfessionalPracticeI",
+    "file": "syllabi/0631 專業實習(一).pdf"
   },
-  "0578": {
-    "title_zh": "觀光日語(二)",
-    "title_en": "Tourism Japanese (II)",
-    "file": "syllabi/0578_觀光日語(二).pdf"
+  "0632": {
+    "title_zh": "賽會經營與實務",
+    "title_en": "OperationandPracticeofTheTournament",
+    "file": "syllabi/0632 賽會經營與實務.pdf"
   },
-  "0586": {
-    "title_zh": "遊程規劃與設計",
-    "title_en": "Tour Planning and Design",
-    "file": "syllabi/0586_遊程規劃與設計.pdf"
+  "0633": {
+    "title_zh": "書報閱讀與表達",
+    "title_en": "Papersreadingandexpressing",
+    "file": "syllabi/0633 書報閱讀與表達.pdf"
   },
-  "0587": {
-    "title_zh": "航空訂位系統",
-    "title_en": "Air Computer Reservation System",
-    "file": "syllabi/0587_航空訂位系統.pdf"
+  "0634": {
+    "title_zh": "科技與媒體應用",
+    "title_en": "TechnologyandMediaApplication",
+    "file": "syllabi/0634 科技與媒體應用.pdf"
   },
-  "0588": {
-    "title_zh": "國際會議展覽規劃與管理",
-    "title_en": "International Conference and Exhibition Planning and Management",
-    "file": "syllabi/0588_國際會議展覽規劃與管理.pdf"
+  "0635": {
+    "title_zh": "進階水上運動與安全指導",
+    "title_en": "GuidanceAdvancedWaterSportsandSecurity",
+    "file": "syllabi/0635 進階水上運動與安全指導.pdf"
+  },
+  "0636": {
+    "title_zh": "銀髮族休閒活動規劃",
+    "title_en": "Silver-HairedLeisureandExercisePromotionPlanning",
+    "file": "syllabi/0636 銀髮族休閒活動規劃.pdf"
+  },
+  "0637": {
+    "title_zh": "研究法(二)",
+    "title_en": "ResearchMethodology(II)",
+    "file": "syllabi/0637 研究法(二).pdf"
+  },
+  "0638": {
+    "title_zh": "專業實習(二)",
+    "title_en": "ProfessionalPracticeII",
+    "file": "syllabi/0638 專業實習(二).pdf"
+  },
+  "0639": {
+    "title_zh": "公共關係",
+    "title_en": "PublicRelationship",
+    "file": "syllabi/0639 公共關係.pdf"
+  },
+  "0640": {
+    "title_zh": "休閒遊憩創業實務",
+    "title_en": "LeisureRecreationVenturePractice",
+    "file": "syllabi/0640 休閒遊憩創業實務.pdf"
+  },
+  "0641": {
+    "title_zh": "運動營養學",
+    "title_en": "NutritioninExercise",
+    "file": "syllabi/0641 運動營養學.pdf"
+  },
+  "0642": {
+    "title_zh": "新聞寫作",
+    "title_en": "NewsCreating",
+    "file": "syllabi/0642 新聞寫作.pdf"
+  },
+  "0643": {
+    "title_zh": "國際經濟",
+    "title_en": "InternationalEconomic",
+    "file": "syllabi/0643 國際經濟.pdf"
+  },
+  "0644": {
+    "title_zh": "傳統整復推拿實務",
+    "title_en": "TraditionalRectificationandPractice",
+    "file": "syllabi/0644 傳統整復推拿實務.pdf"
+  },
+  "0645": {
+    "title_zh": "專業實習(三)",
+    "title_en": "ProfessionalPracticeIII",
+    "file": "syllabi/0645 專業實習(三).pdf"
+  },
+  "0646": {
+    "title_zh": "社會心理學",
+    "title_en": "SocialPsychology",
+    "file": "syllabi/0646 社會心理學.pdf"
+  },
+  "0647": {
+    "title_zh": "登山與健行",
+    "title_en": "MountaineeringandHiking",
+    "file": "syllabi/0647 登山與健行.pdf"
+  },
+  "0648": {
+    "title_zh": "國際運動與休閒產業分析",
+    "title_en": "InternationalSportsandLeisureIndustryAnalysis",
+    "file": "syllabi/0648 國際運動與休閒產業分析.pdf"
+  },
+  "0649": {
+    "title_zh": "特殊族群賽會管理",
+    "title_en": "ManagementofSpecialPopulationSportsEvents",
+    "file": "syllabi/0649 特殊族群賽會管理.pdf"
+  },
+  "0694": {
+    "title_zh": "微積分(二)",
+    "title_en": "CalculusII",
+    "file": "syllabi/0694 微積分(二).pdf"
+  },
+  "0695": {
+    "title_zh": "經濟學",
+    "title_en": "Economics",
+    "file": "syllabi/0695 經濟學.pdf"
+  },
+  "0696": {
+    "title_zh": "會計學",
+    "title_en": "Accounting",
+    "file": "syllabi/0696 會計學.pdf"
+  },
+  "0697": {
+    "title_zh": "服務與製造概論",
+    "title_en": "IntroductiontoServiceandManufacturing",
+    "file": "syllabi/0697 服務與製造概論.pdf"
+  },
+  "0699": {
+    "title_zh": "工程經濟",
+    "title_en": "EngineeringEconomics",
+    "file": "syllabi/0699 工程經濟.pdf"
+  },
+  "0701": {
+    "title_zh": "工程統計(二)",
+    "title_en": "EngineeringStatistics(II)",
+    "file": "syllabi/0701 工程統計(二).pdf"
+  },
+  "0702": {
+    "title_zh": "服務系統設計",
+    "title_en": "DesignofServiceSystem",
+    "file": "syllabi/0702 服務系統設計.pdf"
+  },
+  "0703": {
+    "title_zh": "作業研究(一)",
+    "title_en": "OperationsResearch(I)",
+    "file": "syllabi/0703 作業研究(一).pdf"
+  },
+  "0704": {
+    "title_zh": "生產計劃與管理",
+    "title_en": "ProductionPlanningandManagement",
+    "file": "syllabi/0704 生產計劃與管理.pdf"
+  },
+  "0705": {
+    "title_zh": "資料探勘",
+    "title_en": "DataMining",
+    "file": "syllabi/0705 資料探勘.pdf"
+  },
+  "0706": {
+    "title_zh": "人因工程",
+    "title_en": "Ergonomics",
+    "file": "syllabi/0706 人因工程.pdf"
+  },
+  "0707": {
+    "title_zh": "系統模擬",
+    "title_en": "SystemSimulation",
+    "file": "syllabi/0707 系統模擬.pdf"
+  },
+  "0709": {
+    "title_zh": "六標準差",
+    "title_en": "SixSigma",
+    "file": "syllabi/0709 六標準差.pdf"
+  },
+  "0710": {
+    "title_zh": "田口方法",
+    "title_en": "TaguchiMethod",
+    "file": "syllabi/0710 田口方法.pdf"
+  },
+  "0711": {
+    "title_zh": "實務專題(一)",
+    "title_en": "SpecialTopicsinIndustrialEngineeringandManagement(I)",
+    "file": "syllabi/0711 實務專題(一).pdf"
+  },
+  "0712": {
+    "title_zh": "科技管理",
+    "title_en": "TechnologyManagement",
+    "file": "syllabi/0712 科技管理.pdf"
+  },
+  "0713": {
+    "title_zh": "專業實習(二)",
+    "title_en": "ProfessionalPracticeII",
+    "file": "syllabi/0713 專業實習(二).pdf"
+  },
+  "0714": {
+    "title_zh": "自動化生產系統",
+    "title_en": "AutomatedProductionSystems",
+    "file": "syllabi/0714 自動化生產系統.pdf"
+  },
+  "0958": {
+    "title_zh": "貨幣銀行學",
+    "title_en": "MoneyandBanking",
+    "file": "syllabi/0958 貨幣銀行學.pdf"
+  },
+  "0959": {
+    "title_zh": "綠色產業發展",
+    "title_en": "GreenIndustryDevelopment",
+    "file": "syllabi/0959 綠色產業發展.pdf"
+  },
+  "0960": {
+    "title_zh": "總體經濟學",
+    "title_en": "Macroeconomics",
+    "file": "syllabi/0960 總體經濟學.pdf"
+  },
+  "0961": {
+    "title_zh": "金融科技與精準健康產業實務與應用",
+    "title_en": "FinancialTechnologyandPrecisionHealthIndustryManagement",
+    "file": "syllabi/0961 金融科技與精準健康產業實務與應用.pdf"
   }
 }
