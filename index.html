@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Course Syllabus Lookup</title>
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Arial, "Noto Sans TC", sans-serif; margin: 0; }
+    header { padding: 16px 18px; border-bottom: 1px solid #e5e5e5; }
+    main { padding: 16px 18px; }
+    .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+    input { padding: 10px 12px; font-size: 16px; width: 220px; }
+    button { padding: 10px 14px; font-size: 16px; cursor: pointer; }
+    .hint { color: #666; font-size: 14px; margin-top: 8px; }
+    .status { margin: 12px 0; font-size: 14px; }
+    .status.error { color: #b00020; }
+    .status.ok { color: #0b6b0b; }
+    .viewer-wrap { margin-top: 14px; border-top: 1px solid #eee; padding-top: 14px; }
+    iframe { width: 100%; height: 78vh; border: 1px solid #ddd; border-radius: 6px; }
+    .meta { margin: 6px 0 0; color: #333; font-size: 14px; }
+    code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h2 style="margin:0;">課程碼查詢課綱（PDF）</h2>
+    <div class="hint">輸入四位數課程碼，例如 <code>0576</code>，即可顯示對應課綱 PDF。</div>
+  </header>
+
+  <main>
+    <div class="row">
+      <input id="courseCode" inputmode="numeric" placeholder="輸入課程碼（四位數）" maxlength="4" />
+      <button id="btnSearch">查詢</button>
+      <button id="btnClear" type="button">清除</button>
+    </div>
+
+    <div id="status" class="status"></div>
+
+    <div id="viewer" class="viewer-wrap" style="display:none;">
+      <div id="meta" class="meta"></div>
+      <iframe id="pdfFrame" title="Syllabus PDF Viewer"></iframe>
+    </div>
+  </main>
+
+  <script>
+    // 讀取索引表（課程碼 -> PDF路徑）
+    let indexData = null;
+
+    async function loadIndex() {
+      if (indexData) return indexData;
+      const res = await fetch('./index.json', { cache: 'no-store' });
+      if (!res.ok) throw new Error('無法載入 index.json（請確認檔案存在於 repo 根目錄）');
+      indexData = await res.json();
+      return indexData;
+    }
+
+    function setStatus(msg, type = '') {
+      const el = document.getElementById('status');
+      el.textContent = msg || '';
+      el.className = 'status ' + (type || '');
+    }
+
+    function showViewer(show) {
+      document.getElementById('viewer').style.display = show ? 'block' : 'none';
+    }
+
+    function sanitizeCode(raw) {
+      // 保留數字，限制 4 碼
+      const digits = (raw || '').replace(/\D/g, '').slice(0, 4);
+      return digits;
+    }
+
+    async function lookup() {
+      try {
+        const inputEl = document.getElementById('courseCode');
+        const code = sanitizeCode(inputEl.value);
+        inputEl.value = code;
+
+        if (code.length !== 4) {
+          setStatus('請輸入四位數課程碼。', 'error');
+          showViewer(false);
+          return;
+        }
+
+        setStatus('查詢中…');
+        const idx = await loadIndex();
+
+        const entry = idx[code];
+        if (!entry || !entry.file) {
+          setStatus(`查無課程碼 ${code} 的課綱檔案。請確認 index.json 是否已加入此課程碼。`, 'error');
+          showViewer(false);
+          return;
+        }
+
+        // 顯示 PDF
+        const filePath = entry.file;
+        const title = entry.title_zh ? `｜${entry.title_zh}` : '';
+        document.getElementById('meta').textContent = `課程碼：${code} ${title}（檔案：${filePath}）`;
+
+        const frame = document.getElementById('pdfFrame');
+        frame.src = filePath;
+
+        setStatus('已載入。', 'ok');
+        showViewer(true);
+
+      } catch (err) {
+        console.error(err);
+        setStatus(`發生錯誤：${err.message}`, 'error');
+        showViewer(false);
+      }
+    }
+
+    function clearAll() {
+      document.getElementById('courseCode').value = '';
+      document.getElementById('pdfFrame').src = '';
+      document.getElementById('meta').textContent = '';
+      setStatus('');
+      showViewer(false);
+    }
+
+    document.getElementById('btnSearch').addEventListener('click', lookup);
+    document.getElementById('btnClear').addEventListener('click', clearAll);
+
+    // Enter 直接查詢
+    document.getElementById('courseCode').addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') lookup();
+    });
+  </script>
+</body>
+</html>
